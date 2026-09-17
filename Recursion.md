@@ -1,4 +1,4 @@
-# 🧠 Recursion Mastery Sheet — LeetCode + GFG
+# Recursion Mastery Sheet — LeetCode + GFG
 
 A level-wise, progressively harder question bank to build **rock-solid command over recursion** — from writing your first base case to backtracking on boards and bridging into Dynamic Programming.
 
@@ -6,19 +6,7 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 ---
 
-## 📌 How To Use This Sheet
-
-1. **Don't skip levels.** Recursion is a stacking skill — Level 3 backtracking is unreadable if Level 1 isn't muscle memory.
-2. **For every problem, write down 3 things before coding:** the base case, the recursive case, and what a single call is *supposed to return/do*.
-3. **Trace the recursion tree on paper** for at least the first 2–3 problems of every new level.
-4. **Do the follow-ups.** Each level has a "🔁 Follow-Up Drills" section — these are what actually convert "I understood the solution" into "I can produce this from scratch."
-5. Re-attempt one solved problem from each level a week later, from a blank file, no notes.
-
----
-
-## 🧩 Level 1 — Foundations: Trusting the Base Case
-
-**Goal:** Internalize base case + recursive case + how the call stack unwinds, on problems simple enough that the *recursion*, not the problem, is the thing you're learning.
+##  Level 1 — Foundations: Trusting the Base Case
 
 | Difficulty | Platform | Q.No | Question | Link |
 |---|---|---|---|---|
@@ -32,15 +20,9 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 | Easy | LeetCode | 344 | Reverse String | https://leetcode.com/problems/reverse-string/ |
 | Medium | GFG | G2 | Tower of Hanoi | https://www.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1 |
 
-**🔁 Follow-Up Drills**
-- Re-solve every "Easy" above **without** recursion (pure loop), then convert it back — you should be able to do this in both directions instantly.
-- For Fibonacci and Climbing Stairs: print the recursion tree for `n = 5` by hand and count how many times each sub-value repeats — this is your first intuition for *why memoization exists* (used later in the Follow-Up DP level).
-- Implement Tower of Hanoi so it also **prints every move**, then modify it to return just the **move count** without simulating moves.
-- Write factorial and GCD (Euclidean algorithm) using recursion from memory, no reference.
-
 ---
 
-## 🧩 Level 2 — Backtracking Fundamentals (Part A): Subsets & Permutations
+## Level 2 — Backtracking Fundamentals (Part A): Subsets & Permutations
 
 **Goal:** Learn the universal backtracking template — `choose → explore → un-choose` — on the cleanest possible problems.
 
