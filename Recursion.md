@@ -1,7 +1,5 @@
 # Recursion Mastery Sheet — LeetCode + GFG
 
----
-
 ## Level 1 — Foundations: Trusting the Base Case
 
 **Goal:** Internalize base case + recursive case + how the call stack unwinds, on problems simple enough that the _recursion_, not the problem, is the thing you're learning.
