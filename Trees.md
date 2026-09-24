@@ -1,8 +1,8 @@
-# Trees Mastery Sheet — LeetCode + GFG
+## Trees Mastery Sheet — LeetCode + GFG
 
 ---
 
-## Level 1 — Tree Traversals: The Foundation of Everything
+### Level 1 — Tree Traversals: The Foundation of Everything
 
 **Goal:** Master the three classic DFS traversals (Inorder, Preorder, Postorder) and BFS (Level Order) — both recursively _and_ iteratively. Every single tree problem you'll ever face builds on one of these traversal patterns.
 
