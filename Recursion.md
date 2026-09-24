@@ -1,41 +1,37 @@
 # Recursion Mastery Sheet — LeetCode + GFG
 
-A level-wise, progressively harder question bank to build **rock-solid command over recursion** — from writing your first base case to backtracking on boards and bridging into Dynamic Programming.
-
-> **Note on "Q.No":** LeetCode numbers are official LeetCode problem IDs. GFG does not publish official numbers, so GFG rows are labelled `G1, G2, G3…` as a running serial you can use to track progress.
-
 ---
 
 ## Level 1 — Foundations: Trusting the Base Case
 
 **Goal:** Internalize base case + recursive case + how the call stack unwinds, on problems simple enough that the _recursion_, not the problem, is the thing you're learning.
 
-| Difficulty | Platform | Q.No | Question                          | Link                                                                                 |
-| ---------- | -------- | ---- | --------------------------------- | ------------------------------------------------------------------------------------ |
-| Basic      | GFG      | G1   | Print 1 to N Without Using Loops  | https://www.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1 |
-| Basic      | GFG      | G2   | Print N to 1 Without Loop         | https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1                   |
-| Basic      | GFG      | G3   | Sum of First N Natural Numbers    | https://www.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1                    |
-| Basic      | GFG      | G4   | Factorial of a Number             | https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3331/0 |
-| Easy       | GFG      | G5   | Count Total Digits in a Number    | https://www.geeksforgeeks.org/problems/count-total-digits-in-a-number/1              |
-| Easy       | GFG      | G6   | Sum of Digits of a Number         | https://www.geeksforgeeks.org/problems/sum-of-digits1742/1                           |
-| Easy       | GFG      | G7   | Check Palindrome (Recursive)      | https://www.geeksforgeeks.org/problems/palindrome-string0817/1                       |
-| Easy       | LeetCode | 509  | Fibonacci Number                  | https://leetcode.com/problems/fibonacci-number/                                      |
-| Easy       | GFG      | G8   | Fibonacci Number (GFG)            | https://www.geeksforgeeks.org/problems/print-first-n-fibonacci-numbers1002/1         |
-| Easy       | LeetCode | 70   | Climbing Stairs                   | https://leetcode.com/problems/climbing-stairs/                                       |
-| Easy       | LeetCode | 231  | Power of Two                      | https://leetcode.com/problems/power-of-two/                                          |
-| Easy       | LeetCode | 326  | Power of Three                    | https://leetcode.com/problems/power-of-three/                                        |
-| Easy       | LeetCode | 342  | Power of Four                     | https://leetcode.com/problems/power-of-four/                                         |
-| Easy       | GFG      | G9   | Power Using Recursion             | https://www.geeksforgeeks.org/problems/power-using-recursion/1                       |
-| Medium     | LeetCode | 50   | Pow(x, n)                         | https://leetcode.com/problems/powx-n/                                                |
-| Easy       | LeetCode | 344  | Reverse String                    | https://leetcode.com/problems/reverse-string/                                        |
-| Easy       | GFG      | G10  | Reverse a String Using Recursion  | https://www.geeksforgeeks.org/problems/reverse-a-string-using-recursion/1            |
-| Easy       | GFG      | G11  | String Palindrome (Recursive)     | https://www.geeksforgeeks.org/problems/palindrome-string0817/1                       |
-| Easy       | GFG      | G12  | Length of String Using Recursion  | https://www.geeksforgeeks.org/problems/find-length-of-string4145/1                   |
-| Easy       | GFG      | G13  | GCD Using Recursion (Euclidean)   | https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1                      |
-| Easy       | GFG      | G14  | Check if Array is Sorted          | https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1             |
-| Medium     | GFG      | G15  | Tower of Hanoi                    | https://www.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1                   |
-| Medium     | GFG      | G16  | Lucky Numbers                     | https://www.geeksforgeeks.org/problems/lucky-numbers2911/1                           |
-| Medium     | GFG      | G17  | Possible Words From Phone Digits  | https://www.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1 |
+| Difficulty | Platform | Q.No | Question                         | Link                                                                                            |
+| ---------- | -------- | ---- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Basic      | GFG      | G1   | Print 1 to N Without Using Loops | https://www.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1            |
+| Basic      | GFG      | G2   | Print N to 1 Without Loop        | https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1                              |
+| Basic      | GFG      | G3   | Sum of First N Natural Numbers   | https://www.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1                               |
+| Basic      | GFG      | G4   | Factorial of a Number            | https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3331/0 |
+| Easy       | GFG      | G5   | Count Total Digits in a Number   | https://www.geeksforgeeks.org/problems/count-total-digits-in-a-number/1                         |
+| Easy       | GFG      | G6   | Sum of Digits of a Number        | https://www.geeksforgeeks.org/problems/sum-of-digits1742/1                                      |
+| Easy       | GFG      | G7   | Check Palindrome (Recursive)     | https://www.geeksforgeeks.org/problems/palindrome-string0817/1                                  |
+| Easy       | LeetCode | 509  | Fibonacci Number                 | https://leetcode.com/problems/fibonacci-number/                                                 |
+| Easy       | GFG      | G8   | Fibonacci Number (GFG)           | https://www.geeksforgeeks.org/problems/print-first-n-fibonacci-numbers1002/1                    |
+| Easy       | LeetCode | 70   | Climbing Stairs                  | https://leetcode.com/problems/climbing-stairs/                                                  |
+| Easy       | LeetCode | 231  | Power of Two                     | https://leetcode.com/problems/power-of-two/                                                     |
+| Easy       | LeetCode | 326  | Power of Three                   | https://leetcode.com/problems/power-of-three/                                                   |
+| Easy       | LeetCode | 342  | Power of Four                    | https://leetcode.com/problems/power-of-four/                                                    |
+| Easy       | GFG      | G9   | Power Using Recursion            | https://www.geeksforgeeks.org/problems/power-using-recursion/1                                  |
+| Medium     | LeetCode | 50   | Pow(x, n)                        | https://leetcode.com/problems/powx-n/                                                           |
+| Easy       | LeetCode | 344  | Reverse String                   | https://leetcode.com/problems/reverse-string/                                                   |
+| Easy       | GFG      | G10  | Reverse a String Using Recursion | https://www.geeksforgeeks.org/problems/reverse-a-string-using-recursion/1                       |
+| Easy       | GFG      | G11  | String Palindrome (Recursive)    | https://www.geeksforgeeks.org/problems/palindrome-string0817/1                                  |
+| Easy       | GFG      | G12  | Length of String Using Recursion | https://www.geeksforgeeks.org/problems/find-length-of-string4145/1                              |
+| Easy       | GFG      | G13  | GCD Using Recursion (Euclidean)  | https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1                                 |
+| Easy       | GFG      | G14  | Check if Array is Sorted         | https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1                        |
+| Medium     | GFG      | G15  | Tower of Hanoi                   | https://www.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1                              |
+| Medium     | GFG      | G16  | Lucky Numbers                    | https://www.geeksforgeeks.org/problems/lucky-numbers2911/1                                      |
+| Medium     | GFG      | G17  | Possible Words From Phone Digits | https://www.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1            |
 
 ---
 
@@ -63,18 +59,18 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 **Goal:** Add a _target/constraint_ to the choose-explore-unchoose template — this is the pattern behind most "generate all valid X" interview questions.
 
-| Difficulty | Platform | Q.No | Question                              | Link                                                                               |
-| ---------- | -------- | ---- | ------------------------------------- | ---------------------------------------------------------------------------------- |
-| Medium     | LeetCode | 39   | Combination Sum                       | https://leetcode.com/problems/combination-sum/                                     |
-| Medium     | LeetCode | 40   | Combination Sum II                    | https://leetcode.com/problems/combination-sum-ii/                                  |
-| Medium     | LeetCode | 216  | Combination Sum III                   | https://leetcode.com/problems/combination-sum-iii/                                 |
-| Medium     | GFG      | G23  | Combination Sum                       | https://www.geeksforgeeks.org/problems/combination-sum-1587115620/1                |
-| Medium     | GFG      | G24  | Combination Sum II (GFG)              | https://www.geeksforgeeks.org/problems/combination-sum-ii-1664263832/1             |
-| Medium     | LeetCode | 22   | Generate Parentheses                  | https://leetcode.com/problems/generate-parentheses/                                |
-| Medium     | GFG      | G25  | Generate Parentheses (GFG)            | https://www.geeksforgeeks.org/problems/generate-all-possible-parentheses/1         |
-| Medium     | LeetCode | 17   | Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/               |
-| Medium     | GFG      | G26  | Perfect Sum Problem                   | https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1                   |
-| Medium     | GFG      | G27  | Subset Sum Problem                    | https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1             |
+| Difficulty | Platform | Q.No | Question                              | Link                                                                       |
+| ---------- | -------- | ---- | ------------------------------------- | -------------------------------------------------------------------------- |
+| Medium     | LeetCode | 39   | Combination Sum                       | https://leetcode.com/problems/combination-sum/                             |
+| Medium     | LeetCode | 40   | Combination Sum II                    | https://leetcode.com/problems/combination-sum-ii/                          |
+| Medium     | LeetCode | 216  | Combination Sum III                   | https://leetcode.com/problems/combination-sum-iii/                         |
+| Medium     | GFG      | G23  | Combination Sum                       | https://www.geeksforgeeks.org/problems/combination-sum-1587115620/1        |
+| Medium     | GFG      | G24  | Combination Sum II (GFG)              | https://www.geeksforgeeks.org/problems/combination-sum-ii-1664263832/1     |
+| Medium     | LeetCode | 22   | Generate Parentheses                  | https://leetcode.com/problems/generate-parentheses/                        |
+| Medium     | GFG      | G25  | Generate Parentheses (GFG)            | https://www.geeksforgeeks.org/problems/generate-all-possible-parentheses/1 |
+| Medium     | LeetCode | 17   | Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/       |
+| Medium     | GFG      | G26  | Perfect Sum Problem                   | https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1           |
+| Medium     | GFG      | G27  | Subset Sum Problem                    | https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1     |
 
 ---
 
@@ -82,16 +78,16 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 **Goal:** Move from "generate all combinations" to "generate all valid _decompositions_ of a string" — a slightly harder shape of the same idea.
 
-| Difficulty | Platform | Q.No | Question                       | Link                                                                    |
-| ---------- | -------- | ---- | ------------------------------ | ----------------------------------------------------------------------- |
-| Medium     | LeetCode | 131  | Palindrome Partitioning        | https://leetcode.com/problems/palindrome-partitioning/                  |
-| Medium     | GFG      | G28  | Palindrome Partitioning (GFG)  | https://www.geeksforgeeks.org/problems/palindromic-patitioning4845/1    |
-| Medium     | LeetCode | 93   | Restore IP Addresses           | https://leetcode.com/problems/restore-ip-addresses/                     |
-| Medium     | GFG      | G29  | Word Break                     | https://www.geeksforgeeks.org/problems/word-break1352/1                 |
-| Medium     | LeetCode | 139  | Word Break                     | https://leetcode.com/problems/word-break/                               |
-| Hard       | LeetCode | 140  | Word Break II                  | https://leetcode.com/problems/word-break-ii/                            |
-| Hard       | LeetCode | 301  | Remove Invalid Parentheses     | https://leetcode.com/problems/remove-invalid-parentheses/               |
-| Hard       | LeetCode | 282  | Expression Add Operators       | https://leetcode.com/problems/expression-add-operators/                 |
+| Difficulty | Platform | Q.No | Question                      | Link                                                                 |
+| ---------- | -------- | ---- | ----------------------------- | -------------------------------------------------------------------- |
+| Medium     | LeetCode | 131  | Palindrome Partitioning       | https://leetcode.com/problems/palindrome-partitioning/               |
+| Medium     | GFG      | G28  | Palindrome Partitioning (GFG) | https://www.geeksforgeeks.org/problems/palindromic-patitioning4845/1 |
+| Medium     | LeetCode | 93   | Restore IP Addresses          | https://leetcode.com/problems/restore-ip-addresses/                  |
+| Medium     | GFG      | G29  | Word Break                    | https://www.geeksforgeeks.org/problems/word-break1352/1              |
+| Medium     | LeetCode | 139  | Word Break                    | https://leetcode.com/problems/word-break/                            |
+| Hard       | LeetCode | 140  | Word Break II                 | https://leetcode.com/problems/word-break-ii/                         |
+| Hard       | LeetCode | 301  | Remove Invalid Parentheses    | https://leetcode.com/problems/remove-invalid-parentheses/            |
+| Hard       | LeetCode | 282  | Expression Add Operators      | https://leetcode.com/problems/expression-add-operators/              |
 
 ---
 
@@ -99,22 +95,22 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 **Goal:** Apply backtracking to 2D state spaces — this is where "recursion + a `visited`/`board` mutation + undo" clicks into a reusable pattern for maze/board problems.
 
-| Difficulty | Platform | Q.No | Question                     | Link                                                                    |
-| ---------- | -------- | ---- | ---------------------------- | ----------------------------------------------------------------------- |
-| Easy       | LeetCode | 733  | Flood Fill                   | https://leetcode.com/problems/flood-fill/                               |
-| Easy       | GFG      | G30  | Flood Fill Algorithm         | https://www.geeksforgeeks.org/problems/flood-fill-algorithm1856/1       |
-| Medium     | GFG      | G31  | Rat in a Maze                | https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1          |
-| Medium     | LeetCode | 79   | Word Search                  | https://leetcode.com/problems/word-search/                              |
-| Hard       | LeetCode | 212  | Word Search II               | https://leetcode.com/problems/word-search-ii/                           |
-| Medium     | LeetCode | 494  | Target Sum                   | https://leetcode.com/problems/target-sum/                               |
-| Medium     | GFG      | G32  | Knight Walk                  | https://www.geeksforgeeks.org/problems/knight-walk4521/1                |
-| Hard       | GFG      | G33  | N-Queen Problem              | https://www.geeksforgeeks.org/problems/n-queen-problem0315/1            |
-| Hard       | LeetCode | 51   | N-Queens                     | https://leetcode.com/problems/n-queens/                                 |
-| Hard       | LeetCode | 52   | N-Queens II                  | https://leetcode.com/problems/n-queens-ii/                              |
-| Hard       | GFG      | G34  | Solve the Sudoku             | https://www.geeksforgeeks.org/problems/solve-the-sudoku-1587115621/1    |
-| Hard       | LeetCode | 37   | Sudoku Solver                | https://leetcode.com/problems/sudoku-solver/                            |
-| Medium     | GFG      | G35  | M-Coloring Problem           | https://www.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1  |
-| Medium     | GFG      | G36  | Unique Paths in a Grid       | https://www.geeksforgeeks.org/problems/number-of-paths0926/1            |
+| Difficulty | Platform | Q.No | Question               | Link                                                                   |
+| ---------- | -------- | ---- | ---------------------- | ---------------------------------------------------------------------- |
+| Easy       | LeetCode | 733  | Flood Fill             | https://leetcode.com/problems/flood-fill/                              |
+| Easy       | GFG      | G30  | Flood Fill Algorithm   | https://www.geeksforgeeks.org/problems/flood-fill-algorithm1856/1      |
+| Medium     | GFG      | G31  | Rat in a Maze          | https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1         |
+| Medium     | LeetCode | 79   | Word Search            | https://leetcode.com/problems/word-search/                             |
+| Hard       | LeetCode | 212  | Word Search II         | https://leetcode.com/problems/word-search-ii/                          |
+| Medium     | LeetCode | 494  | Target Sum             | https://leetcode.com/problems/target-sum/                              |
+| Medium     | GFG      | G32  | Knight Walk            | https://www.geeksforgeeks.org/problems/knight-walk4521/1               |
+| Hard       | GFG      | G33  | N-Queen Problem        | https://www.geeksforgeeks.org/problems/n-queen-problem0315/1           |
+| Hard       | LeetCode | 51   | N-Queens               | https://leetcode.com/problems/n-queens/                                |
+| Hard       | LeetCode | 52   | N-Queens II            | https://leetcode.com/problems/n-queens-ii/                             |
+| Hard       | GFG      | G34  | Solve the Sudoku       | https://www.geeksforgeeks.org/problems/solve-the-sudoku-1587115621/1   |
+| Hard       | LeetCode | 37   | Sudoku Solver          | https://leetcode.com/problems/sudoku-solver/                           |
+| Medium     | GFG      | G35  | M-Coloring Problem     | https://www.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1 |
+| Medium     | GFG      | G36  | Unique Paths in a Grid | https://www.geeksforgeeks.org/problems/number-of-paths0926/1           |
 
 ---
 
@@ -122,14 +118,14 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 **Goal:** See recursion as the natural way to express "do something to the rest of the list, then fix up the head" — a different flavor from backtracking.
 
-| Difficulty | Platform | Q.No | Question                     | Link                                                                  |
-| ---------- | -------- | ---- | ---------------------------- | --------------------------------------------------------------------- |
-| Easy       | LeetCode | 206  | Reverse Linked List          | https://leetcode.com/problems/reverse-linked-list/                    |
-| Easy       | GFG      | G37  | Reverse a Linked List        | https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1        |
-| Easy       | LeetCode | 21   | Merge Two Sorted Lists       | https://leetcode.com/problems/merge-two-sorted-lists/                 |
-| Easy       | LeetCode | 234  | Palindrome Linked List       | https://leetcode.com/problems/palindrome-linked-list/                 |
-| Medium     | LeetCode | 24   | Swap Nodes in Pairs          | https://leetcode.com/problems/swap-nodes-in-pairs/                    |
-| Hard       | LeetCode | 25   | Reverse Nodes in k-Group     | https://leetcode.com/problems/reverse-nodes-in-k-group/               |
+| Difficulty | Platform | Q.No | Question                 | Link                                                           |
+| ---------- | -------- | ---- | ------------------------ | -------------------------------------------------------------- |
+| Easy       | LeetCode | 206  | Reverse Linked List      | https://leetcode.com/problems/reverse-linked-list/             |
+| Easy       | GFG      | G37  | Reverse a Linked List    | https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1 |
+| Easy       | LeetCode | 21   | Merge Two Sorted Lists   | https://leetcode.com/problems/merge-two-sorted-lists/          |
+| Easy       | LeetCode | 234  | Palindrome Linked List   | https://leetcode.com/problems/palindrome-linked-list/          |
+| Medium     | LeetCode | 24   | Swap Nodes in Pairs      | https://leetcode.com/problems/swap-nodes-in-pairs/             |
+| Hard       | LeetCode | 25   | Reverse Nodes in k-Group | https://leetcode.com/problems/reverse-nodes-in-k-group/        |
 
 ---
 
@@ -156,15 +152,15 @@ A level-wise, progressively harder question bank to build **rock-solid command o
 
 **Goal:** A distinct recursion flavor: split the problem into independent halves, solve each, then combine — the backbone of merge sort, quicksort, and fast exponentiation.
 
-| Difficulty | Platform | Q.No | Question                                            | Link                                                                      |
-| ---------- | -------- | ---- | --------------------------------------------------- | ------------------------------------------------------------------------- |
-| Medium     | LeetCode | 912  | Sort an Array _(implement Merge Sort & Quick Sort)_ | https://leetcode.com/problems/sort-an-array/                              |
-| Medium     | GFG      | G38  | Merge Sort                                          | https://www.geeksforgeeks.org/problems/merge-sort/1                       |
-| Medium     | GFG      | G39  | Quick Sort                                          | https://www.geeksforgeeks.org/problems/quick-sort/1                       |
-| Medium     | LeetCode | 241  | Different Ways to Add Parentheses                   | https://leetcode.com/problems/different-ways-to-add-parentheses/          |
-| Hard       | LeetCode | 23   | Merge k Sorted Lists                                | https://leetcode.com/problems/merge-k-sorted-lists/                       |
-| Medium     | GFG      | G40  | Josephus Problem                                    | https://www.geeksforgeeks.org/problems/josephus-problem/1                 |
-| Medium     | GFG      | G41  | Count Inversions                                    | https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1    |
+| Difficulty | Platform | Q.No | Question                                            | Link                                                                   |
+| ---------- | -------- | ---- | --------------------------------------------------- | ---------------------------------------------------------------------- |
+| Medium     | LeetCode | 912  | Sort an Array _(implement Merge Sort & Quick Sort)_ | https://leetcode.com/problems/sort-an-array/                           |
+| Medium     | GFG      | G38  | Merge Sort                                          | https://www.geeksforgeeks.org/problems/merge-sort/1                    |
+| Medium     | GFG      | G39  | Quick Sort                                          | https://www.geeksforgeeks.org/problems/quick-sort/1                    |
+| Medium     | LeetCode | 241  | Different Ways to Add Parentheses                   | https://leetcode.com/problems/different-ways-to-add-parentheses/       |
+| Hard       | LeetCode | 23   | Merge k Sorted Lists                                | https://leetcode.com/problems/merge-k-sorted-lists/                    |
+| Medium     | GFG      | G40  | Josephus Problem                                    | https://www.geeksforgeeks.org/problems/josephus-problem/1              |
+| Medium     | GFG      | G41  | Count Inversions                                    | https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1 |
 
 ---
 
